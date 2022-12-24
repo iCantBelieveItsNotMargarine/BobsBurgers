@@ -1,0 +1,160 @@
+body {
+    background-color: black;
+    color: white;
+    margin: auto;
+    display: flex;
+}
+
+#container {
+    height: 100vh;
+    /* display: flex; */
+    margin: auto;
+}
+
+#frame {
+    height: 99vh;
+    margin: auto 0;
+    width: 50vw;
+    color: black;
+}
+
+#title {
+    background-color: rgb(255, 255, 0, .8);
+    border: solid red 3px;
+    text-shadow: -3px 0px black;
+    color: red;
+    padding: 5px;
+    margin-bottom: 2px;
+    border-top-left-radius: 9px;
+    border-radius: 9px;
+}
+
+#subtitle {
+    justify-content:center;
+    align-items: center;
+    align-content: center;
+    min-height: 1em;
+    background-image: url() ;
+    color: gray;
+}
+
+#title, #subtitle, #buttonDiv, #name, #photoDiv, #otherInfo, #wikiDiv, #urlDiv {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+    text-align: center;
+    margin: auto;
+    /* display: flex; */
+    /* padding: .5em; */
+}
+
+#title {
+    margin-bottom: 2px;
+}
+
+#buttonDiv {
+    background-color: rgb(59, 139, 59, .8);
+    padding: .3em;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+}
+
+#newCharBtn {
+    background-color: rgb(0, 0, 0);
+    border: solid 1px white;
+    border-radius: .5em;
+    font-size: 1em;
+    padding: .25em;
+    width: 13em;
+    height: 2.3em;
+    margin: 1em;
+    color: pink;
+}
+
+#newCharBtn:hover {
+    background-color: rgb(110, 109, 109);
+}
+
+#newCharBtn:active{
+    background-color: rgb(198, 195, 195);
+}
+
+#name {
+    background-color: rgb(214, 13, 13, .8);
+    min-height: 2em;
+    font-size: 1.5em;
+    max-height: 2.5em;
+    padding: 15px;
+}
+
+#name {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#halves {
+    display: flex;
+    /* min-height: 4em; */
+    /* min-height: 100%; */
+}
+
+#body1, #body2 {
+    width: 49.999vw;
+    height: 300px;
+}
+
+#photoDiv {
+    background-color: rgb(255, 255, 0, .8);
+    min-height: 100%;
+    /* min-height: 100%; */
+    height: 300px;
+    border-bottom-left-radius: 9px;
+}
+
+img {
+    border-radius: 1em;
+    /* max-height: 375px; */
+    /* min-height: 375px; */
+    height: 100px;
+}
+
+#photoText {
+    border: none;
+}
+
+#otherInfo {
+    background-color: rgb(255, 192, 203, .8);
+    /* font-size: 1.5em; */
+    min-height: 100%;
+    border-bottom-right-radius: 9px;
+}
+
+#wikiDiv, #urlLink {
+    color: gray;
+}
+
+.wiki {
+    padding-top: 1em;
+}
+
+#urlLink {
+    padding-bottom: 1em;
+}
+
+#wikiDiv:hover, #urlLink:hover {
+    color: rgb(42, 41, 41);
+}
+
+#wikiDiv:active, #urlLink:active {
+    color:red;
+}
+
+@media (min-width: 2px){
+    #frame{width: 100vw};
+}
+
+@media (min-width: 650px){
+    #frame{width: 50vw}
+}
+

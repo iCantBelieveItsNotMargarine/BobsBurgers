@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bob's Burgers Random Character</title>
+    <link rel="stylesheet" href="./bobsBurges.css" />
+</head>
+
+<body>
+    <div id="container">
+        <div id="frame">
+            <div id="title">
+                <h1>Bob's Burgers Characters</h1>
+            </div>
+            <div id="subtitle">
+                <h4>
+                    click the button to get a random character's info
+                    <p>big thanks to the <a href="https://www.bobsburgersapi.com/" target="_blank">the Bob's Burgers API</a></p>
+                </h4>
+                
+            </div>
+            <div id="buttonDiv">
+                <button onclick="userAction()" id="newCharBtn">new character</button>
+            </div>
+
+            <div id="name">
+                name will go here
+            </div>
+            <div id="halves">
+                <div id="body1">
+                    <div id="photoDiv">
+                        <img id="photo"> 
+                        <p id="photoText">
+                            photo will go here
+                        </p>
+                    </div>
+                </div>
+                <div id="body2">
+                    <p id="otherInfo">
+                        other info will appear here
+                    </p>
+                </div>
+            </div>
+            <div class="wiki">
+                <a id="wikiDiv" target="_blank">
+                    wiki link here
+                </a>
+            </div>
+            <br/>
+            <div id="urlDiv">
+                <a id="urlLink" target="_blank">
+                    api url link here
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="./bobsBurgers.js"></script>
+</body>
+
+</html>
