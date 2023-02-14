@@ -38,7 +38,7 @@ body {
     color: gray;
 }
 
-#title, #subtitle, #buttonDiv, #name, #photoDiv, #otherInfo, #wikiDiv, #urlDiv {
+#title, #subtitle, #buttonDiv, #name, #photoDiv, #otherInfo, #otherInfo2, #wikiDiv, #urlDiv {
     justify-content: center;
     display: flex;
     align-items: center;
@@ -126,8 +126,23 @@ img {
 #otherInfo {
     background-color: rgb(255, 192, 203, .8);
     /* font-size: 1.5em; */
-    min-height: 100%;
+    min-height: 49.9%;
+    max-height: 50%;
+}
+
+#otherInfo2 {
+    background-color: orange;
+    min-height: 49.9%;
+    max-height: 50%;
+    margin: 0;
     border-bottom-right-radius: 9px;
+    
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+    text-align: center;
+    margin: auto;
 }
 
 #wikiDiv, #urlLink {

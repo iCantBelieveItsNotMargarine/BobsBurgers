@@ -22,6 +22,7 @@ const userAction = async () => {
             const nameOf = document.getElementById("name");
             const otherInfo = document.getElementById("otherInfo");
             const photograph = data.image;
+            const otherInfo2 = document.getElementById("otherInfo2");
 
             photoText.innerHTML = "";
             imgDiv.setAttribute("src", `${photograph}`);
@@ -45,13 +46,14 @@ const userAction = async () => {
 
             // below will set the value of the div id'd as otherInfo as empty
             otherInfo.innerHTML = "";
+            otherInfo2.innerHTML = "";
 
             otherInfo.append(`${data.name} is ${data.gender}. `);
             
             let occupationDivText = `Occupation: ${data.occupation}
             
             `;
-            (!data.occupation) ? otherInfo.append('Occupation: unknown. ') : otherInfo.append(occupationDivText);
+            (!data.occupation) ? otherInfo2.append('Occupation: unknown. ') : otherInfo2.append(occupationDivText);
 
             (!data.hairColor) ? otherInfo.append('Hair color: unknown. ') : otherInfo.append(`Hair color: ${data.hairColor}. `);
 
