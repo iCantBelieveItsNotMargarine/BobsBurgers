@@ -14,6 +14,7 @@ const userAction = async () => {
         .then(data => {
             console.log(data);
             console.log(data.url);
+            console.log(data.image);
 
             // setting variables 
             const charName = data.name;
@@ -22,13 +23,15 @@ const userAction = async () => {
             const nameOf = document.getElementById("name");
             const otherInfo = document.getElementById("otherInfo");
             const photograph = data.image;
+            const photo = toString(photograph);
+            console.log(photo);
             const otherInfo2 = document.getElementById("otherInfo2");
 
             photoText.innerHTML = "";
             imgDiv.setAttribute("src", `${photograph}`);
             imgDiv.setAttribute("alt", `${data.name}`);
             nameOf.innerHTML = "";
-            nameOf.append(`This is "${data.name}" from Bob's Burgers.\
+            nameOf.append(`This is "${charName}" from Bob's Burgers.\
             
             `);
             
