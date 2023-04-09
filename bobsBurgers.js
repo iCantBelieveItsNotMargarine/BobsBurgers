@@ -13,54 +13,46 @@ const userAction = async () => {
         .then(response => response.json())
         .then(data => {
             console.log(data);
-            console.log(data.url);
-            console.log(data.image);
 
             // setting variables 
-            const charName = data.name;
             const imgDiv = document.getElementById("photo");
             const photoText = document.getElementById("photoText");
             const nameOf = document.getElementById("name");
             const otherInfo = document.getElementById("otherInfo");
-            const photograph = data.image;
-            const photo = toString(photograph);
-            console.log(photo);
             const otherInfo2 = document.getElementById("otherInfo2");
+            const otherInfo3 = document.getElementById("otherInfo3");
+            const otherInfo4 = document.getElementById("otherInfo4");
+            const otherInfo5 = document.getElementById("otherInfo5");
 
-            photoText.innerHTML = "";
-            imgDiv.setAttribute("src", `${photograph}`);
-            imgDiv.setAttribute("alt", `${data.name}`);
-            nameOf.innerHTML = "";
-            nameOf.append(`This is "${charName}" from Bob's Burgers.\
-            
-            `);
-            
             // below is a ternary statement (?) which will insert the age if it is known
-            const unk = ` 
-            Age: unknown`;
-
-            const ageKnown = "\n " +
-            `Age: ${data.age}`;
-
-            (!data.age) ? nameOf.append(unk) : nameOf.append(ageKnown);
-
+            
             // below is a ternary statement (?) which will insert hair color depending on whether it exists 
             // (!data.hairColor) ? nameOf.append(`Hair color is unknown. `) : nameOf.append(`Hair color is ${data.hairColor}. `)
 
             // below will set the value of the div id'd as otherInfo as empty
             otherInfo.innerHTML = "";
             otherInfo2.innerHTML = "";
+            otherInfo3.innerHTML = "";
+            otherInfo4.innerHTML = "";
+            otherInfo5.innerHTML = "";
+            photoText.innerHTML = "";
+            nameOf.innerHTML = "";
 
-            otherInfo.append(`${data.name} is ${data.gender}. `);
+            imgDiv.setAttribute("src", `${data.image}`);
+            imgDiv.setAttribute("alt", `${data.name}`);
             
-            let occupationDivText = `Occupation: ${data.occupation}
+            nameOf.append(`This is ${data.name} from Bob's Burgers.`);
+
+            (!data.age) ? otherInfo.append(`${data.name} is a ${data.gender} of unknown age.`) 
+                : otherInfo.append(`${data.name} is a ${data.gender} of age ${data.age}. `);
             
-            `;
-            (!data.occupation) ? otherInfo2.append('Occupation: unknown. ') : otherInfo2.append(occupationDivText);
+            (!data.occupation) ? otherInfo2.append('Job: unknown') : otherInfo2.append(`Job: ${data.occupation}`);
 
-            (!data.hairColor) ? otherInfo.append('Hair color: unknown. ') : otherInfo.append(`Hair color: ${data.hairColor}. `);
+            (!data.hairColor) ? otherInfo3.append('Hair color: unknown ') : otherInfo3.append(`Hair color: ${data.hairColor} `);
 
-            (!data.voicedBy) ? otherInfo.append(`Voice actor: unknown; first appearance: episode ${data.firstEpisode}. `) : otherInfo.append(`Voiced by ${data.voicedBy}; first appearance: episode ${data.firstEpisode}. `);
+            (!data.voicedBy) ? otherInfo4.append(`Voiced by: unknown`) : otherInfo4.append(`Voiced by: ${data.voicedBy}`);
+            
+            (!data.firstEpisode) ? otherInfo5.append(`First episode: unknown`) : otherInfo5.append(`First episode: ${data.firstEpisode}`)
 
             const wikiUrl = data.wikiUrl;
             const wikiDiv = document.getElementById("wikiDiv");
@@ -83,7 +75,7 @@ const userAction = async () => {
             // ${data.occupation}
             // `;
             
-            imgDiv.setAttribute("style", "height:80%;max-width:95%;padding:0;");
+            imgDiv.setAttribute("style", "min-height:40%;max-height:80%;max-width:95%;padding:0;");
             // otherInfo.setAttribute("style", "max-height:80%;;font-size:17px;");
             // otherInfo.innerHTML = otherInformation;
         });

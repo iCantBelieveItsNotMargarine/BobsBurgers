@@ -38,7 +38,7 @@ body {
     color: gray;
 }
 
-#title, #subtitle, #buttonDiv, #name, #photoDiv, #otherInfo, #otherInfo2, #wikiDiv, #urlDiv {
+#title, #subtitle, #buttonDiv, #name, #photoDiv, #otherInfo, #otherInfo2, #otherInfo3, #otherInfo4, #otherInfo5, .wiki, #urlDiv {
     justify-content: center;
     display: flex;
     align-items: center;
@@ -74,10 +74,12 @@ body {
 
 #newCharBtn:hover {
     background-color: rgb(110, 109, 109);
+    cursor: pointer;
 }
 
 #newCharBtn:active{
     background-color: rgb(198, 195, 195);
+    cursor: pointer;
 }
 
 #name {
@@ -101,7 +103,7 @@ body {
 
 #body1, #body2 {
     width: 49.999vw;
-    height: 300px;
+    height: 500px;
 }
 
 #photoDiv {
@@ -123,26 +125,30 @@ img {
     border: none;
 }
 
+#otherInfo, #otherInfo2, #otherInfo3, #otherInfo4, #otherInfo5 {
+    min-height: 19.99999%;
+    max-height: 20%;
+}
+
 #otherInfo {
     background-color: rgb(255, 192, 203, .8);
-    /* font-size: 1.5em; */
-    min-height: 49.9%;
-    max-height: 50%;
 }
 
 #otherInfo2 {
     background-color: orange;
-    min-height: 49.9%;
-    max-height: 50%;
-    margin: 0;
-    border-bottom-right-radius: 9px;
-    
-    justify-content: center;
-    display: flex;
-    align-items: center;
+}
 
-    text-align: center;
-    margin: auto;
+#otherInfo3 {
+    background-color: grey;
+}
+
+#otherInfo4 {
+    background-color: aquamarine;
+}
+
+#otherInfo5{
+    background-color: olivedrab;
+    border-bottom-right-radius: 9px;
 }
 
 #wikiDiv, #urlLink {
@@ -157,19 +163,25 @@ img {
     padding-bottom: 1em;
 }
 
+.wiki, #urlLink {
+    border-left: 1px, blue;
+}
+
 #wikiDiv:hover, #urlLink:hover {
     color: rgb(42, 41, 41);
+    cursor: pointer;
 }
 
 #wikiDiv:active, #urlLink:active {
     color:red;
+    cursor: pointer;
 }
 
 @media (min-width: 2px){
-    #frame{width: 100vw};
+    #frame{width: 94vw};
 }
 
 @media (min-width: 650px){
-    #frame{width: 50vw}
+    #frame{width: 60vw}
 }
 
